@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.form-log {
+  width: 35%;
+  padding: 1% 2%;
+  margin: auto;
+  background-color: #1f2327;
+  border-radius: 4%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+.title {
+  font-size: 80%;
+}
+
+.soundtitle {
+  font-size: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-log {
+    min-width: 40%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form-log {
+    min-width: 80%;
+    max-width: 100%;
+  }
+}

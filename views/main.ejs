@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+    <title><%= title %></title>
+</head>
+<body class="bg-dark text-light">
+    <main class="form-log">
+
+        <form method="post" action="/">
+           <h1 class="h3 mb-3 fw-normal text-light text-center">Tiktok sound puller</h1>
+           <% if(typeof(error) != "undefined") { %>
+            <div role="alert" class="alert alert-danger alert-dismissible fade show">
+                <%= error %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+
+        <% if(typeof(soundlink) != "undefined") { %> 
+            <p class="title"><strong class="soundtitle">Sound title : </strong> <%= locals.soundtitle %></p>
+            <p><strong>Sound link : </strong> <a href="<%= locals.soundlink %>">Écouter</a></p>
+        <% } else { %>
+            <input type="url" name="link" class="form-control mb-2"  placeholder="https://m.tiktok.com/h5/share/music/6799003918132153094.html">
+            <button class="w-100 btn btn-primary mt-2 mb-2" type='submit'>Pull music</button>
+        <% } %>
+
+        </form>
+     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
